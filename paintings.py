@@ -1129,6 +1129,254 @@ def old_sake_slot():
     return slot_icon("OLD SAKE", (255, 85, 255), item)
 
 
+# ------------------------------------------------------------------ dining plates (top-down)
+
+WALNUT = [(92, 60, 40), (84, 54, 36)]
+
+
+def table(seed):
+    c = Canvas(BLOCK, BLOCK, WALNUT[0])
+    planks(c, 0, 0, BLOCK, BLOCK, WALNUT, (62, 40, 26), row=8, seed=seed)
+    return c
+
+
+def shade(c, cx, cy, rx, ry, t=0.35, ang=0.0):
+    """Darkens whatever is under an ellipse: a soft contact shadow, offset down-right."""
+    r = max(rx, ry) + 1
+    ca, sa = math.cos(ang), math.sin(ang)
+    for y in range(int(cy - r), int(cy + r) + 2):
+        for x in range(int(cx - r), int(cx + r) + 2):
+            dx, dy = x + 0.5 - cx, y + 0.5 - cy
+            u, v = dx * ca + dy * sa, -dx * sa + dy * ca
+            if (u / rx) ** 2 + (v / ry) ** 2 <= 1.0 and c.get(x, y) is not None:
+                c.px(x, y, dark(c.get(x, y), t))
+
+
+def nigiri_top(c, cx, cy, kind, rng, ang=0.0):
+    px = c.oell(cx, cy, 6.4, 4.2, RICE, (150, 148, 138), ang)
+    c.speckle(px, [RICE_SHADE], 0.2, rng)
+    if kind == "salmon":
+        salmon_slab(c, cx, cy - 0.5, rx=6.2, ry=3.2, ang=ang)
+    elif kind == "tuna":
+        tuna_slab(c, cx, cy - 0.5, rx=6.2, ry=3.2, ang=ang)
+    else:
+        c.rect(cx - 6, cy - 4, cx + 7, cy + 3, (186, 136, 36))
+        c.rect(cx - 5, cy - 3, cx + 6, cy + 2, TAMAGO)
+        c.rect(cx - 5, cy - 3, cx + 6, cy - 2, light(TAMAGO, 0.3))
+        c.rect(cx - 1, cy - 4, cx + 2, cy + 4, NORI)
+
+
+def grains(c, pts):
+    for (x, y) in pts:
+        c.px(x, y, RICE)
+        c.px(x + 1, y, RICE_SHADE)
+
+
+def chopsticks_top(c, x0, y0, x1, y1, gap=3, tip_close=1):
+    """A pair seen from above: lacquered backs, natural tips, a shadow under them."""
+    for off in (0, gap):
+        c.line(x0 + 1, y0 + off + 2, x1 + 1, y1 + off * tip_close / max(1, gap) + 2, dark((92, 60, 40), 0.35), 2)
+    for off, col in ((0, (150, 44, 34)), (gap, (128, 36, 28))):
+        ex, ey = x1, y1 + off * tip_close / max(1, gap)
+        mx, my = x0 + (ex - x0) * 0.62, y0 + off + (ey - y0 - off) * 0.62
+        c.line(x0, y0 + off, mx, my, col, 2)
+        c.line(mx, my, ex, ey, (206, 156, 96), 2)
+
+
+def soy_dish(c, cx, cy, r=6, level=1.0, wasabi_swirl=True):
+    shade(c, cx + 1.5, cy + 2, r + 1, r + 1)
+    c.oell(cx, cy, r, r, (240, 238, 232), (150, 146, 140))
+    soy = c.ell(cx, cy, (r - 1.6) * level, (r - 1.6) * level, (66, 34, 18))
+    for (x, y, u, v) in soy:
+        if -2.5 < u < -0.5 and -2.5 < v < -0.8:
+            c.px(x, y, (130, 82, 50))
+    if wasabi_swirl:
+        for i in range(6):
+            a = i * 0.7
+            c.px(cx + math.cos(a) * (1 + i * 0.35), cy + math.sin(a) * (1 + i * 0.35), (128, 160, 60))
+
+
+def ochoko_top(c, cx, cy, r=5, full=True):
+    shade(c, cx + 1.5, cy + 2, r + 1, r + 1)
+    c.oell(cx, cy, r, r, (242, 240, 232), (150, 146, 140))
+    c.ell(cx, cy, r - 1.5, r - 1.5, (54, 86, 160))
+    c.ell(cx, cy, r - 2.5, r - 2.5, (242, 240, 232))
+    if r > 4:
+        c.ell(cx, cy, r - 3.5, r - 3.5, (54, 86, 160))
+    if full:
+        c.ell(cx, cy, r - 1.6, r - 1.6, (236, 222, 170))
+        c.px(cx - 1, cy - 1, (255, 248, 220))
+
+
+def tea_cup(c, cx, cy, r=6):
+    shade(c, cx + 1.5, cy + 2, r + 1, r + 1)
+    c.oell(cx, cy, r, r, (150, 120, 90), (90, 70, 50))
+    c.ell(cx, cy, r - 1.4, r - 1.4, (150, 176, 72))
+    c.px(cx - 1, cy - 1, (196, 214, 120))
+
+
+def miso_bowl(c, cx, cy, r=8):
+    shade(c, cx + 1.5, cy + 2, r + 1, r + 1)
+    c.oell(cx, cy, r, r, (40, 24, 22), (20, 12, 10))
+    soup = c.ell(cx, cy, r - 1.5, r - 1.5, (168, 112, 56))
+    for (x, y, u, v) in soup:
+        if int(u * 0.7 + v) % 4 == 0:
+            c.px(x, y, (186, 132, 72))
+    for (dx, dy) in ((-2, -1), (2, 1), (0, 3)):
+        c.rect(cx + dx, cy + dy, cx + dx + 2, cy + dy + 2, (244, 240, 226))
+    for (dx, dy) in ((-3, 2), (3, -2), (1, -3)):
+        c.px(cx + dx, cy + dy, (90, 160, 60))
+
+
+def napkin(c, x0, y0):
+    shade(c, x0 + 7, y0 + 6, 8, 6)
+    c.poly([(x0, y0 + 3), (x0 + 6, y0), (x0 + 13, y0 + 2), (x0 + 15, y0 + 8), (x0 + 9, y0 + 12), (x0 + 2, y0 + 10)], (236, 232, 222))
+    c.line(x0 + 3, y0 + 4, x0 + 10, y0 + 8, (196, 192, 182))
+    c.line(x0 + 7, y0 + 2, x0 + 9, y0 + 9, (196, 192, 182))
+
+
+def round_plate(c, cx, cy, r, rim):
+    shade(c, cx + 2, cy + 2.5, r + 1, r + 1)
+    c.oell(cx, cy, r, r, rim, dark(rim, 0.4))
+    c.ell(cx, cy, r - 2.2, r - 2.2, (246, 244, 238))
+    c.ell(cx, cy + 0.6, r - 4.5, r - 4.5, (236, 234, 226))
+
+
+def dine_nigiri_board():
+    rng = random.Random(41)
+    c = table(41)
+    shade(c, 28, 28, 18, 16, ang=0)
+    c.rect(9, 11, 43, 41, (120, 84, 46))
+    c.rect(10, 12, 42, 39, (214, 172, 112))
+    c.rect(10, 12, 42, 13, (234, 196, 138))
+    for y in range(16, 39, 5):
+        c.rect(10, y, 42, y + 1, (200, 158, 100))
+    nigiri_top(c, 18, 20, "salmon", rng, 0.1)
+    nigiri_top(c, 34, 31, "tuna", rng, -0.08)
+    nigiri_top(c, 18, 31, "tamago", rng)
+    grains(c, [(31, 18), (35, 21), (33, 23), (37, 19)])
+    c.px(36, 24, (90, 50, 30)); c.px(37, 24, (110, 66, 40))
+    soy_dish(c, 52, 18, r=6, level=0.85)
+    ginger(c, 52, 33)
+    c.rect(43, 47, 50, 55, (60, 96, 156)); c.rect(43, 47, 50, 48, (110, 144, 200))
+    chopsticks_top(c, 10, 50, 57, 46, gap=3, tip_close=3)
+    return c
+
+
+def dine_maki_ring():
+    rng = random.Random(42)
+    c = table(42)
+    round_plate(c, 28, 30, 19, (60, 96, 180))
+    for i in range(8):
+        if i in (1, 2):
+            continue
+        a = math.radians(i * 45 - 90)
+        maki(c, 28 + math.cos(a) * 11, 30 + math.sin(a) * 11, 4.2, SALMON if i % 2 else TUNA, rng)
+    grains(c, [(37, 20), (40, 24), (39, 28)])
+    ginger(c, 27, 30); wasabi(c, 31, 34)
+    soy_dish(c, 53, 13, r=6, level=0.7)
+    shade(c, 44, 44, 5, 5, 0.3)
+    maki(c, 42, 41, 4.4, SALMON, rng)
+    chopsticks_top(c, 60, 60, 43, 39, gap=4, tip_close=1)
+    return c
+
+
+def dine_chirashi_miso():
+    rng = random.Random(43)
+    c = table(43)
+    shade(c, 38, 40, 17, 17)
+    c.oell(36, 38, 16, 16, (40, 22, 22), (20, 10, 10))
+    c.ell(36, 38, 14.5, 14.5, (150, 28, 28))
+    rice_px = c.ell(36, 38, 12.5, 12.5, RICE)
+    c.speckle(rice_px, [RICE_SHADE], 0.22, rng)
+    for (dx, dy, a) in ((-6, -5, 0.5), (-1, -8, -0.3), (5, -6, 0.9)):
+        salmon_slab(c, 36 + dx, 38 + dy, rx=4, ry=2, ang=a)
+    for (dx, dy) in ((-8, 1), (-3, 3)):
+        c.rect(36 + dx, 38 + dy, 36 + dx + 4, 38 + dy + 3, TUNA)
+    for (dx, dy) in ((1, -2), (-5, 6)):
+        c.rect(36 + dx, 38 + dy, 36 + dx + 3, 38 + dy + 3, TAMAGO)
+    for (dx, dy) in ((-1, 2), (-7, -1), (2, 4)):
+        c.ell(36 + dx, 38 + dy, 1.2, 1.2, (250, 120, 40))
+    c.ell(42, 44, 5, 4, RICE_SHADE)
+    grains(c, [(43, 42), (40, 46), (44, 47), (52, 50), (25, 53)])
+    miso_bowl(c, 14, 14, r=8)
+    chopsticks_top(c, 33, 8, 59, 22, gap=5, tip_close=4)
+    return c
+
+
+def dine_sashimi_for_two():
+    rng = random.Random(44)
+    c = table(44)
+    shade(c, 34, 30, 23, 14)
+    c.oell(32, 27, 22, 13, (246, 244, 238), (150, 146, 140))
+    c.ell(32, 27, 20, 11, (54, 86, 160))
+    c.ell(32, 27, 19, 10, (246, 244, 238))
+    px = c.ell(30, 28, 6, 4, (240, 240, 236))
+    for (x, y, u, v) in px:
+        if (x + y) % 2 == 0:
+            c.px(x, y, (214, 214, 210))
+    c.oell(27, 25, 4, 2.5, LEAF, dark(LEAF, 0.4), -0.6)
+    for i in (0, 2, 3):
+        salmon_slab(c, 18 + i * 3, 22 + i * 2, rx=5, ry=2.4, ang=-0.9)
+    for i in (0, 2):
+        tuna_slab(c, 40 + i * 4, 21 + i * 2, rx=5, ry=2.4, ang=0.8)
+    grains(c, [(21, 30), (44, 32)])
+    ochoko_top(c, 11, 50, r=5, full=False)
+    ochoko_top(c, 24, 52, r=5, full=True)
+    chopsticks_top(c, 34, 58, 59, 45, gap=3, tip_close=2)
+    chopsticks_top(c, 8, 7, 38, 6, gap=3, tip_close=3)
+    return c
+
+
+def dine_bento():
+    rng = random.Random(45)
+    c = table(45)
+    shade(c, 31, 31, 22, 18)
+    c.rect(7, 11, 51, 47, (24, 20, 20))
+    c.rect(9, 13, 49, 45, (168, 30, 30))
+    c.rect(29, 13, 31, 45, (24, 20, 20)); c.rect(31, 28, 49, 30, (24, 20, 20))
+    px = [(x, y) for x in range(10, 29) for y in range(14, 44)]
+    c.rect(10, 14, 29, 44, RICE)
+    c.speckle(px, [RICE_SHADE], 0.2, rng)
+    c.poly([(11, 41), (18, 22), (25, 41)], (150, 148, 138))
+    c.poly([(12, 40), (18, 24), (24, 40)], RICE)
+    c.rect(14, 34, 23, 41, NORI)
+    c.ell(18, 29, 1.6, 1.6, (200, 40, 70))
+    for (bx, by, r) in ((22, 28, 2.6), (24, 31, 2.2)):
+        c.ell(bx, by, r, r, RICE_SHADE)
+    for y in (16, 20, 24):
+        c.rect(33, y, 47, y + 3, TAMAGO)
+        c.rect(33, y, 47, y + 1, light(TAMAGO, 0.3))
+    for x in range(32, 49, 3):
+        c.poly([(x, 30), (x + 1.5, 33), (x + 3, 30)], (60, 150, 60))
+    for (tx, ty) in ((35, 37), (41, 39)):
+        c.oell(tx, ty, 3, 2.4, (240, 214, 70), (180, 150, 30))
+    ginger(c, 44, 41)
+    tea_cup(c, 55, 18, r=4)
+    chopsticks_top(c, 8, 52, 58, 50, gap=3, tip_close=3)
+    return c
+
+
+def dine_last_piece():
+    rng = random.Random(46)
+    c = table(46)
+    round_plate(c, 30, 30, 18, (200, 56, 56))
+    for i in range(4):
+        x0, y0 = 20 + i * 4, 26 + (i % 2) * 6
+        c.line(x0, y0, x0 + 6, y0 + 3, (96, 56, 32))
+    grains(c, [(22, 22), (26, 36), (38, 38), (34, 22), (19, 32), (40, 28)])
+    nigiri_top(c, 33, 29, "salmon", rng, -0.2)
+    chopsticks_top(c, 51, 8, 57, 42, gap=4, tip_close=4)
+    tokkuri_px = c.oell(14, 52, 7, 5, (242, 240, 232), (120, 118, 112), 0.25)
+    for (x, y, u, v) in tokkuri_px:
+        if abs(u) < 1:
+            c.px(x, y, (54, 86, 160))
+    c.rect(20, 53, 27, 56, (242, 240, 232))
+    c.px(27, 55, (66, 34, 18)); c.px(28, 56, (66, 34, 18))
+    napkin(c, 44, 46)
+    return c
+
+
 PIECES = [
     ("sushi_nigiri_trio_1x3.png", nigiri_trio),
     ("sushi_noren_curtain_1x3.png", noren_curtain),
@@ -1154,6 +1402,12 @@ PIECES = [
     ("bar_slot_old_sake_1x1.png", old_sake_slot),
     ("bar_plate_salmon_pair_1x1.png", salmon_plate),
     ("bar_plate_tuna_tamago_1x1.png", tuna_tamago_plate),
+    ("bar_dine_nigiri_board_1x1.png", dine_nigiri_board),
+    ("bar_dine_maki_ring_1x1.png", dine_maki_ring),
+    ("bar_dine_chirashi_miso_1x1.png", dine_chirashi_miso),
+    ("bar_dine_sashimi_for_two_1x1.png", dine_sashimi_for_two),
+    ("bar_dine_bento_1x1.png", dine_bento),
+    ("bar_dine_last_piece_1x1.png", dine_last_piece),
 ]
 
 if __name__ == "__main__":
