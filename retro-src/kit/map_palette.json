@@ -1,0 +1,3946 @@
+{
+ "minecraft": "26.3",
+ "count": 244,
+ "index": "packed map colour id (the byte stored in map data) = base_id * 4 + brightness_id",
+ "source": {
+  "bundler_jar": "/tmp/claude-1000/-home-tricks-Desktop-Claude-playground/dc12d5fc-871d-4574-8d10-24b921a19760/scratchpad/port-263-fxpf/bladefx/jars/mojang_26.3.jar",
+  "inner_jar": "26.3/server-26.3.jar",
+  "inner_jar_sha256": "a362163eec5d1612d520772bc16e5b39c09e3b234fdc045f56bf544284ee8ae6",
+  "build_time": "2026-09-15T11:20:48+00:00",
+  "protocol_version": 777,
+  "classes": [
+   "net/minecraft/world/level/material/MapColor.class",
+   "net/minecraft/world/level/material/MapColor$Brightness.class",
+   "net/minecraft/util/ARGB.class"
+  ],
+  "cross_checked_against": "/tmp/claude-1000/-home-tricks-Desktop-Claude-playground/dc12d5fc-871d-4574-8d10-24b921a19760/scratchpad/port263-dreadplate/review-docs-r2/srv-off/libraries/io/papermc/paper/paper-api/26.3.build.194-stable/paper-api-26.3.build.194-stable.jar :: org/bukkit/map/MapPalette.colors (identical, entries 0-3 transparent)",
+  "bedrock_cross_check": "/home/tricks/Downloads/backup-ed0f3f2c-feeb-47a2-8cf7-eea898ff8f03/plugins/Geyser-Spigot-mushroomfix.jar :: org/geysermc/geyser/level/MapColor (identical for all ids)"
+ },
+ "derivation": "Base colours and ids read from the bytecode of MapColor.<clinit> (new MapColor(id, col)); brightness ids/modifiers from MapColor$Brightness.<clinit>: LOW(id 0)=180, NORMAL(id 1)=220, HIGH(id 2)=255, LOWEST(id 3)=135. Colour = ARGB.scaleRGB(col, modifier): each channel (long)c * modifier / 255 (integer division, clamped 0..255), as in MapColor.calculateARGBColor. NONE (base 0, ids 0-3) is transparent and excluded. Regenerate with derive_palette.py.",
+ "brightness_levels": {
+  "LOW": {
+   "id": 0,
+   "modifier": 180
+  },
+  "NORMAL": {
+   "id": 1,
+   "modifier": 220
+  },
+  "HIGH": {
+   "id": 2,
+   "modifier": 255
+  },
+  "LOWEST": {
+   "id": 3,
+   "modifier": 135
+  }
+ },
+ "colors": {
+  "4": [
+   89,
+   125,
+   39
+  ],
+  "5": [
+   109,
+   153,
+   48
+  ],
+  "6": [
+   127,
+   178,
+   56
+  ],
+  "7": [
+   67,
+   94,
+   29
+  ],
+  "8": [
+   174,
+   164,
+   115
+  ],
+  "9": [
+   213,
+   201,
+   140
+  ],
+  "10": [
+   247,
+   233,
+   163
+  ],
+  "11": [
+   130,
+   123,
+   86
+  ],
+  "12": [
+   140,
+   140,
+   140
+  ],
+  "13": [
+   171,
+   171,
+   171
+  ],
+  "14": [
+   199,
+   199,
+   199
+  ],
+  "15": [
+   105,
+   105,
+   105
+  ],
+  "16": [
+   180,
+   0,
+   0
+  ],
+  "17": [
+   220,
+   0,
+   0
+  ],
+  "18": [
+   255,
+   0,
+   0
+  ],
+  "19": [
+   135,
+   0,
+   0
+  ],
+  "20": [
+   112,
+   112,
+   180
+  ],
+  "21": [
+   138,
+   138,
+   220
+  ],
+  "22": [
+   160,
+   160,
+   255
+  ],
+  "23": [
+   84,
+   84,
+   135
+  ],
+  "24": [
+   117,
+   117,
+   117
+  ],
+  "25": [
+   144,
+   144,
+   144
+  ],
+  "26": [
+   167,
+   167,
+   167
+  ],
+  "27": [
+   88,
+   88,
+   88
+  ],
+  "28": [
+   0,
+   87,
+   0
+  ],
+  "29": [
+   0,
+   106,
+   0
+  ],
+  "30": [
+   0,
+   124,
+   0
+  ],
+  "31": [
+   0,
+   65,
+   0
+  ],
+  "32": [
+   180,
+   180,
+   180
+  ],
+  "33": [
+   220,
+   220,
+   220
+  ],
+  "34": [
+   255,
+   255,
+   255
+  ],
+  "35": [
+   135,
+   135,
+   135
+  ],
+  "36": [
+   115,
+   118,
+   129
+  ],
+  "37": [
+   141,
+   144,
+   158
+  ],
+  "38": [
+   164,
+   168,
+   184
+  ],
+  "39": [
+   86,
+   88,
+   97
+  ],
+  "40": [
+   106,
+   76,
+   54
+  ],
+  "41": [
+   130,
+   94,
+   66
+  ],
+  "42": [
+   151,
+   109,
+   77
+  ],
+  "43": [
+   79,
+   57,
+   40
+  ],
+  "44": [
+   79,
+   79,
+   79
+  ],
+  "45": [
+   96,
+   96,
+   96
+  ],
+  "46": [
+   112,
+   112,
+   112
+  ],
+  "47": [
+   59,
+   59,
+   59
+  ],
+  "48": [
+   45,
+   45,
+   180
+  ],
+  "49": [
+   55,
+   55,
+   220
+  ],
+  "50": [
+   64,
+   64,
+   255
+  ],
+  "51": [
+   33,
+   33,
+   135
+  ],
+  "52": [
+   100,
+   84,
+   50
+  ],
+  "53": [
+   123,
+   102,
+   62
+  ],
+  "54": [
+   143,
+   119,
+   72
+  ],
+  "55": [
+   75,
+   63,
+   38
+  ],
+  "56": [
+   180,
+   177,
+   172
+  ],
+  "57": [
+   220,
+   217,
+   211
+  ],
+  "58": [
+   255,
+   252,
+   245
+  ],
+  "59": [
+   135,
+   133,
+   129
+  ],
+  "60": [
+   152,
+   89,
+   36
+  ],
+  "61": [
+   186,
+   109,
+   44
+  ],
+  "62": [
+   216,
+   127,
+   51
+  ],
+  "63": [
+   114,
+   67,
+   27
+  ],
+  "64": [
+   125,
+   53,
+   152
+  ],
+  "65": [
+   153,
+   65,
+   186
+  ],
+  "66": [
+   178,
+   76,
+   216
+  ],
+  "67": [
+   94,
+   40,
+   114
+  ],
+  "68": [
+   72,
+   108,
+   152
+  ],
+  "69": [
+   88,
+   132,
+   186
+  ],
+  "70": [
+   102,
+   153,
+   216
+  ],
+  "71": [
+   54,
+   81,
+   114
+  ],
+  "72": [
+   161,
+   161,
+   36
+  ],
+  "73": [
+   197,
+   197,
+   44
+  ],
+  "74": [
+   229,
+   229,
+   51
+  ],
+  "75": [
+   121,
+   121,
+   27
+  ],
+  "76": [
+   89,
+   144,
+   17
+  ],
+  "77": [
+   109,
+   176,
+   21
+  ],
+  "78": [
+   127,
+   204,
+   25
+  ],
+  "79": [
+   67,
+   108,
+   13
+  ],
+  "80": [
+   170,
+   89,
+   116
+  ],
+  "81": [
+   208,
+   109,
+   142
+  ],
+  "82": [
+   242,
+   127,
+   165
+  ],
+  "83": [
+   128,
+   67,
+   87
+  ],
+  "84": [
+   53,
+   53,
+   53
+  ],
+  "85": [
+   65,
+   65,
+   65
+  ],
+  "86": [
+   76,
+   76,
+   76
+  ],
+  "87": [
+   40,
+   40,
+   40
+  ],
+  "88": [
+   108,
+   108,
+   108
+  ],
+  "89": [
+   132,
+   132,
+   132
+  ],
+  "90": [
+   153,
+   153,
+   153
+  ],
+  "91": [
+   81,
+   81,
+   81
+  ],
+  "92": [
+   53,
+   89,
+   108
+  ],
+  "93": [
+   65,
+   109,
+   132
+  ],
+  "94": [
+   76,
+   127,
+   153
+  ],
+  "95": [
+   40,
+   67,
+   81
+  ],
+  "96": [
+   89,
+   44,
+   125
+  ],
+  "97": [
+   109,
+   54,
+   153
+  ],
+  "98": [
+   127,
+   63,
+   178
+  ],
+  "99": [
+   67,
+   33,
+   94
+  ],
+  "100": [
+   36,
+   53,
+   125
+  ],
+  "101": [
+   44,
+   65,
+   153
+  ],
+  "102": [
+   51,
+   76,
+   178
+  ],
+  "103": [
+   27,
+   40,
+   94
+  ],
+  "104": [
+   72,
+   53,
+   36
+  ],
+  "105": [
+   88,
+   65,
+   44
+  ],
+  "106": [
+   102,
+   76,
+   51
+  ],
+  "107": [
+   54,
+   40,
+   27
+  ],
+  "108": [
+   72,
+   89,
+   36
+  ],
+  "109": [
+   88,
+   109,
+   44
+  ],
+  "110": [
+   102,
+   127,
+   51
+  ],
+  "111": [
+   54,
+   67,
+   27
+  ],
+  "112": [
+   108,
+   36,
+   36
+  ],
+  "113": [
+   132,
+   44,
+   44
+  ],
+  "114": [
+   153,
+   51,
+   51
+  ],
+  "115": [
+   81,
+   27,
+   27
+  ],
+  "116": [
+   17,
+   17,
+   17
+  ],
+  "117": [
+   21,
+   21,
+   21
+  ],
+  "118": [
+   25,
+   25,
+   25
+  ],
+  "119": [
+   13,
+   13,
+   13
+  ],
+  "120": [
+   176,
+   168,
+   54
+  ],
+  "121": [
+   215,
+   205,
+   66
+  ],
+  "122": [
+   250,
+   238,
+   77
+  ],
+  "123": [
+   132,
+   126,
+   40
+  ],
+  "124": [
+   64,
+   154,
+   150
+  ],
+  "125": [
+   79,
+   188,
+   183
+  ],
+  "126": [
+   92,
+   219,
+   213
+  ],
+  "127": [
+   48,
+   115,
+   112
+  ],
+  "128": [
+   52,
+   90,
+   180
+  ],
+  "129": [
+   63,
+   110,
+   220
+  ],
+  "130": [
+   74,
+   128,
+   255
+  ],
+  "131": [
+   39,
+   67,
+   135
+  ],
+  "132": [
+   0,
+   153,
+   40
+  ],
+  "133": [
+   0,
+   187,
+   50
+  ],
+  "134": [
+   0,
+   217,
+   58
+  ],
+  "135": [
+   0,
+   114,
+   30
+  ],
+  "136": [
+   91,
+   60,
+   34
+  ],
+  "137": [
+   111,
+   74,
+   42
+  ],
+  "138": [
+   129,
+   86,
+   49
+  ],
+  "139": [
+   68,
+   45,
+   25
+  ],
+  "140": [
+   79,
+   1,
+   0
+  ],
+  "141": [
+   96,
+   1,
+   0
+  ],
+  "142": [
+   112,
+   2,
+   0
+  ],
+  "143": [
+   59,
+   1,
+   0
+  ],
+  "144": [
+   147,
+   124,
+   113
+  ],
+  "145": [
+   180,
+   152,
+   138
+  ],
+  "146": [
+   209,
+   177,
+   161
+  ],
+  "147": [
+   110,
+   93,
+   85
+  ],
+  "148": [
+   112,
+   57,
+   25
+  ],
+  "149": [
+   137,
+   70,
+   31
+  ],
+  "150": [
+   159,
+   82,
+   36
+  ],
+  "151": [
+   84,
+   43,
+   19
+  ],
+  "152": [
+   105,
+   61,
+   76
+  ],
+  "153": [
+   128,
+   75,
+   93
+  ],
+  "154": [
+   149,
+   87,
+   108
+  ],
+  "155": [
+   78,
+   46,
+   57
+  ],
+  "156": [
+   79,
+   76,
+   97
+  ],
+  "157": [
+   96,
+   93,
+   119
+  ],
+  "158": [
+   112,
+   108,
+   138
+  ],
+  "159": [
+   59,
+   57,
+   73
+  ],
+  "160": [
+   131,
+   93,
+   25
+  ],
+  "161": [
+   160,
+   114,
+   31
+  ],
+  "162": [
+   186,
+   133,
+   36
+  ],
+  "163": [
+   98,
+   70,
+   19
+  ],
+  "164": [
+   72,
+   82,
+   37
+  ],
+  "165": [
+   88,
+   100,
+   45
+  ],
+  "166": [
+   103,
+   117,
+   53
+  ],
+  "167": [
+   54,
+   61,
+   28
+  ],
+  "168": [
+   112,
+   54,
+   55
+  ],
+  "169": [
+   138,
+   66,
+   67
+  ],
+  "170": [
+   160,
+   77,
+   78
+  ],
+  "171": [
+   84,
+   40,
+   41
+  ],
+  "172": [
+   40,
+   28,
+   24
+  ],
+  "173": [
+   49,
+   35,
+   30
+  ],
+  "174": [
+   57,
+   41,
+   35
+  ],
+  "175": [
+   30,
+   21,
+   18
+  ],
+  "176": [
+   95,
+   75,
+   69
+  ],
+  "177": [
+   116,
+   92,
+   84
+  ],
+  "178": [
+   135,
+   107,
+   98
+  ],
+  "179": [
+   71,
+   56,
+   51
+  ],
+  "180": [
+   61,
+   64,
+   64
+  ],
+  "181": [
+   75,
+   79,
+   79
+  ],
+  "182": [
+   87,
+   92,
+   92
+  ],
+  "183": [
+   46,
+   48,
+   48
+  ],
+  "184": [
+   86,
+   51,
+   62
+  ],
+  "185": [
+   105,
+   62,
+   75
+  ],
+  "186": [
+   122,
+   73,
+   88
+  ],
+  "187": [
+   64,
+   38,
+   46
+  ],
+  "188": [
+   53,
+   43,
+   64
+  ],
+  "189": [
+   65,
+   53,
+   79
+  ],
+  "190": [
+   76,
+   62,
+   92
+  ],
+  "191": [
+   40,
+   32,
+   48
+  ],
+  "192": [
+   53,
+   35,
+   24
+  ],
+  "193": [
+   65,
+   43,
+   30
+  ],
+  "194": [
+   76,
+   50,
+   35
+  ],
+  "195": [
+   40,
+   26,
+   18
+  ],
+  "196": [
+   53,
+   57,
+   29
+  ],
+  "197": [
+   65,
+   70,
+   36
+  ],
+  "198": [
+   76,
+   82,
+   42
+  ],
+  "199": [
+   40,
+   43,
+   22
+  ],
+  "200": [
+   100,
+   42,
+   32
+  ],
+  "201": [
+   122,
+   51,
+   39
+  ],
+  "202": [
+   142,
+   60,
+   46
+  ],
+  "203": [
+   75,
+   31,
+   24
+  ],
+  "204": [
+   26,
+   15,
+   11
+  ],
+  "205": [
+   31,
+   18,
+   13
+  ],
+  "206": [
+   37,
+   22,
+   16
+  ],
+  "207": [
+   19,
+   11,
+   8
+  ],
+  "208": [
+   133,
+   33,
+   34
+  ],
+  "209": [
+   163,
+   41,
+   42
+  ],
+  "210": [
+   189,
+   48,
+   49
+  ],
+  "211": [
+   100,
+   25,
+   25
+  ],
+  "212": [
+   104,
+   44,
+   68
+  ],
+  "213": [
+   127,
+   54,
+   83
+  ],
+  "214": [
+   148,
+   63,
+   97
+  ],
+  "215": [
+   78,
+   33,
+   51
+  ],
+  "216": [
+   64,
+   17,
+   20
+  ],
+  "217": [
+   79,
+   21,
+   25
+  ],
+  "218": [
+   92,
+   25,
+   29
+  ],
+  "219": [
+   48,
+   13,
+   15
+  ],
+  "220": [
+   15,
+   88,
+   94
+  ],
+  "221": [
+   18,
+   108,
+   115
+  ],
+  "222": [
+   22,
+   126,
+   134
+  ],
+  "223": [
+   11,
+   66,
+   70
+  ],
+  "224": [
+   40,
+   100,
+   98
+  ],
+  "225": [
+   50,
+   122,
+   120
+  ],
+  "226": [
+   58,
+   142,
+   140
+  ],
+  "227": [
+   30,
+   75,
+   74
+  ],
+  "228": [
+   60,
+   31,
+   43
+  ],
+  "229": [
+   74,
+   37,
+   53
+  ],
+  "230": [
+   86,
+   44,
+   62
+  ],
+  "231": [
+   45,
+   23,
+   32
+  ],
+  "232": [
+   14,
+   127,
+   93
+  ],
+  "233": [
+   17,
+   155,
+   114
+  ],
+  "234": [
+   20,
+   180,
+   133
+  ],
+  "235": [
+   10,
+   95,
+   70
+  ],
+  "236": [
+   70,
+   70,
+   70
+  ],
+  "237": [
+   86,
+   86,
+   86
+  ],
+  "238": [
+   100,
+   100,
+   100
+  ],
+  "239": [
+   52,
+   52,
+   52
+  ],
+  "240": [
+   152,
+   123,
+   103
+  ],
+  "241": [
+   186,
+   150,
+   126
+  ],
+  "242": [
+   216,
+   175,
+   147
+  ],
+  "243": [
+   114,
+   92,
+   77
+  ],
+  "244": [
+   89,
+   117,
+   105
+  ],
+  "245": [
+   109,
+   144,
+   129
+  ],
+  "246": [
+   127,
+   167,
+   150
+  ],
+  "247": [
+   67,
+   88,
+   79
+  ]
+ },
+ "info": {
+  "4": {
+   "base": "GRASS",
+   "base_id": 1,
+   "base_rgb": [
+    127,
+    178,
+    56
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "5": {
+   "base": "GRASS",
+   "base_id": 1,
+   "base_rgb": [
+    127,
+    178,
+    56
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "6": {
+   "base": "GRASS",
+   "base_id": 1,
+   "base_rgb": [
+    127,
+    178,
+    56
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "7": {
+   "base": "GRASS",
+   "base_id": 1,
+   "base_rgb": [
+    127,
+    178,
+    56
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "8": {
+   "base": "SAND",
+   "base_id": 2,
+   "base_rgb": [
+    247,
+    233,
+    163
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "9": {
+   "base": "SAND",
+   "base_id": 2,
+   "base_rgb": [
+    247,
+    233,
+    163
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "10": {
+   "base": "SAND",
+   "base_id": 2,
+   "base_rgb": [
+    247,
+    233,
+    163
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "11": {
+   "base": "SAND",
+   "base_id": 2,
+   "base_rgb": [
+    247,
+    233,
+    163
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "12": {
+   "base": "WOOL",
+   "base_id": 3,
+   "base_rgb": [
+    199,
+    199,
+    199
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "13": {
+   "base": "WOOL",
+   "base_id": 3,
+   "base_rgb": [
+    199,
+    199,
+    199
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "14": {
+   "base": "WOOL",
+   "base_id": 3,
+   "base_rgb": [
+    199,
+    199,
+    199
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "15": {
+   "base": "WOOL",
+   "base_id": 3,
+   "base_rgb": [
+    199,
+    199,
+    199
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "16": {
+   "base": "FIRE",
+   "base_id": 4,
+   "base_rgb": [
+    255,
+    0,
+    0
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "17": {
+   "base": "FIRE",
+   "base_id": 4,
+   "base_rgb": [
+    255,
+    0,
+    0
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "18": {
+   "base": "FIRE",
+   "base_id": 4,
+   "base_rgb": [
+    255,
+    0,
+    0
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "19": {
+   "base": "FIRE",
+   "base_id": 4,
+   "base_rgb": [
+    255,
+    0,
+    0
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "20": {
+   "base": "ICE",
+   "base_id": 5,
+   "base_rgb": [
+    160,
+    160,
+    255
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "21": {
+   "base": "ICE",
+   "base_id": 5,
+   "base_rgb": [
+    160,
+    160,
+    255
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "22": {
+   "base": "ICE",
+   "base_id": 5,
+   "base_rgb": [
+    160,
+    160,
+    255
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "23": {
+   "base": "ICE",
+   "base_id": 5,
+   "base_rgb": [
+    160,
+    160,
+    255
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "24": {
+   "base": "METAL",
+   "base_id": 6,
+   "base_rgb": [
+    167,
+    167,
+    167
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "25": {
+   "base": "METAL",
+   "base_id": 6,
+   "base_rgb": [
+    167,
+    167,
+    167
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "26": {
+   "base": "METAL",
+   "base_id": 6,
+   "base_rgb": [
+    167,
+    167,
+    167
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "27": {
+   "base": "METAL",
+   "base_id": 6,
+   "base_rgb": [
+    167,
+    167,
+    167
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "28": {
+   "base": "PLANT",
+   "base_id": 7,
+   "base_rgb": [
+    0,
+    124,
+    0
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "29": {
+   "base": "PLANT",
+   "base_id": 7,
+   "base_rgb": [
+    0,
+    124,
+    0
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "30": {
+   "base": "PLANT",
+   "base_id": 7,
+   "base_rgb": [
+    0,
+    124,
+    0
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "31": {
+   "base": "PLANT",
+   "base_id": 7,
+   "base_rgb": [
+    0,
+    124,
+    0
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "32": {
+   "base": "SNOW",
+   "base_id": 8,
+   "base_rgb": [
+    255,
+    255,
+    255
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "33": {
+   "base": "SNOW",
+   "base_id": 8,
+   "base_rgb": [
+    255,
+    255,
+    255
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "34": {
+   "base": "SNOW",
+   "base_id": 8,
+   "base_rgb": [
+    255,
+    255,
+    255
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "35": {
+   "base": "SNOW",
+   "base_id": 8,
+   "base_rgb": [
+    255,
+    255,
+    255
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "36": {
+   "base": "CLAY",
+   "base_id": 9,
+   "base_rgb": [
+    164,
+    168,
+    184
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "37": {
+   "base": "CLAY",
+   "base_id": 9,
+   "base_rgb": [
+    164,
+    168,
+    184
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "38": {
+   "base": "CLAY",
+   "base_id": 9,
+   "base_rgb": [
+    164,
+    168,
+    184
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "39": {
+   "base": "CLAY",
+   "base_id": 9,
+   "base_rgb": [
+    164,
+    168,
+    184
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "40": {
+   "base": "DIRT",
+   "base_id": 10,
+   "base_rgb": [
+    151,
+    109,
+    77
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "41": {
+   "base": "DIRT",
+   "base_id": 10,
+   "base_rgb": [
+    151,
+    109,
+    77
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "42": {
+   "base": "DIRT",
+   "base_id": 10,
+   "base_rgb": [
+    151,
+    109,
+    77
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "43": {
+   "base": "DIRT",
+   "base_id": 10,
+   "base_rgb": [
+    151,
+    109,
+    77
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "44": {
+   "base": "STONE",
+   "base_id": 11,
+   "base_rgb": [
+    112,
+    112,
+    112
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "45": {
+   "base": "STONE",
+   "base_id": 11,
+   "base_rgb": [
+    112,
+    112,
+    112
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "46": {
+   "base": "STONE",
+   "base_id": 11,
+   "base_rgb": [
+    112,
+    112,
+    112
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "47": {
+   "base": "STONE",
+   "base_id": 11,
+   "base_rgb": [
+    112,
+    112,
+    112
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "48": {
+   "base": "WATER",
+   "base_id": 12,
+   "base_rgb": [
+    64,
+    64,
+    255
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "49": {
+   "base": "WATER",
+   "base_id": 12,
+   "base_rgb": [
+    64,
+    64,
+    255
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "50": {
+   "base": "WATER",
+   "base_id": 12,
+   "base_rgb": [
+    64,
+    64,
+    255
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "51": {
+   "base": "WATER",
+   "base_id": 12,
+   "base_rgb": [
+    64,
+    64,
+    255
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "52": {
+   "base": "WOOD",
+   "base_id": 13,
+   "base_rgb": [
+    143,
+    119,
+    72
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "53": {
+   "base": "WOOD",
+   "base_id": 13,
+   "base_rgb": [
+    143,
+    119,
+    72
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "54": {
+   "base": "WOOD",
+   "base_id": 13,
+   "base_rgb": [
+    143,
+    119,
+    72
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "55": {
+   "base": "WOOD",
+   "base_id": 13,
+   "base_rgb": [
+    143,
+    119,
+    72
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "56": {
+   "base": "QUARTZ",
+   "base_id": 14,
+   "base_rgb": [
+    255,
+    252,
+    245
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "57": {
+   "base": "QUARTZ",
+   "base_id": 14,
+   "base_rgb": [
+    255,
+    252,
+    245
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "58": {
+   "base": "QUARTZ",
+   "base_id": 14,
+   "base_rgb": [
+    255,
+    252,
+    245
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "59": {
+   "base": "QUARTZ",
+   "base_id": 14,
+   "base_rgb": [
+    255,
+    252,
+    245
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "60": {
+   "base": "COLOR_ORANGE",
+   "base_id": 15,
+   "base_rgb": [
+    216,
+    127,
+    51
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "61": {
+   "base": "COLOR_ORANGE",
+   "base_id": 15,
+   "base_rgb": [
+    216,
+    127,
+    51
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "62": {
+   "base": "COLOR_ORANGE",
+   "base_id": 15,
+   "base_rgb": [
+    216,
+    127,
+    51
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "63": {
+   "base": "COLOR_ORANGE",
+   "base_id": 15,
+   "base_rgb": [
+    216,
+    127,
+    51
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "64": {
+   "base": "COLOR_MAGENTA",
+   "base_id": 16,
+   "base_rgb": [
+    178,
+    76,
+    216
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "65": {
+   "base": "COLOR_MAGENTA",
+   "base_id": 16,
+   "base_rgb": [
+    178,
+    76,
+    216
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "66": {
+   "base": "COLOR_MAGENTA",
+   "base_id": 16,
+   "base_rgb": [
+    178,
+    76,
+    216
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "67": {
+   "base": "COLOR_MAGENTA",
+   "base_id": 16,
+   "base_rgb": [
+    178,
+    76,
+    216
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "68": {
+   "base": "COLOR_LIGHT_BLUE",
+   "base_id": 17,
+   "base_rgb": [
+    102,
+    153,
+    216
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "69": {
+   "base": "COLOR_LIGHT_BLUE",
+   "base_id": 17,
+   "base_rgb": [
+    102,
+    153,
+    216
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "70": {
+   "base": "COLOR_LIGHT_BLUE",
+   "base_id": 17,
+   "base_rgb": [
+    102,
+    153,
+    216
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "71": {
+   "base": "COLOR_LIGHT_BLUE",
+   "base_id": 17,
+   "base_rgb": [
+    102,
+    153,
+    216
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "72": {
+   "base": "COLOR_YELLOW",
+   "base_id": 18,
+   "base_rgb": [
+    229,
+    229,
+    51
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "73": {
+   "base": "COLOR_YELLOW",
+   "base_id": 18,
+   "base_rgb": [
+    229,
+    229,
+    51
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "74": {
+   "base": "COLOR_YELLOW",
+   "base_id": 18,
+   "base_rgb": [
+    229,
+    229,
+    51
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "75": {
+   "base": "COLOR_YELLOW",
+   "base_id": 18,
+   "base_rgb": [
+    229,
+    229,
+    51
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "76": {
+   "base": "COLOR_LIGHT_GREEN",
+   "base_id": 19,
+   "base_rgb": [
+    127,
+    204,
+    25
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "77": {
+   "base": "COLOR_LIGHT_GREEN",
+   "base_id": 19,
+   "base_rgb": [
+    127,
+    204,
+    25
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "78": {
+   "base": "COLOR_LIGHT_GREEN",
+   "base_id": 19,
+   "base_rgb": [
+    127,
+    204,
+    25
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "79": {
+   "base": "COLOR_LIGHT_GREEN",
+   "base_id": 19,
+   "base_rgb": [
+    127,
+    204,
+    25
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "80": {
+   "base": "COLOR_PINK",
+   "base_id": 20,
+   "base_rgb": [
+    242,
+    127,
+    165
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "81": {
+   "base": "COLOR_PINK",
+   "base_id": 20,
+   "base_rgb": [
+    242,
+    127,
+    165
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "82": {
+   "base": "COLOR_PINK",
+   "base_id": 20,
+   "base_rgb": [
+    242,
+    127,
+    165
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "83": {
+   "base": "COLOR_PINK",
+   "base_id": 20,
+   "base_rgb": [
+    242,
+    127,
+    165
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "84": {
+   "base": "COLOR_GRAY",
+   "base_id": 21,
+   "base_rgb": [
+    76,
+    76,
+    76
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "85": {
+   "base": "COLOR_GRAY",
+   "base_id": 21,
+   "base_rgb": [
+    76,
+    76,
+    76
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "86": {
+   "base": "COLOR_GRAY",
+   "base_id": 21,
+   "base_rgb": [
+    76,
+    76,
+    76
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "87": {
+   "base": "COLOR_GRAY",
+   "base_id": 21,
+   "base_rgb": [
+    76,
+    76,
+    76
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "88": {
+   "base": "COLOR_LIGHT_GRAY",
+   "base_id": 22,
+   "base_rgb": [
+    153,
+    153,
+    153
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "89": {
+   "base": "COLOR_LIGHT_GRAY",
+   "base_id": 22,
+   "base_rgb": [
+    153,
+    153,
+    153
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "90": {
+   "base": "COLOR_LIGHT_GRAY",
+   "base_id": 22,
+   "base_rgb": [
+    153,
+    153,
+    153
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "91": {
+   "base": "COLOR_LIGHT_GRAY",
+   "base_id": 22,
+   "base_rgb": [
+    153,
+    153,
+    153
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "92": {
+   "base": "COLOR_CYAN",
+   "base_id": 23,
+   "base_rgb": [
+    76,
+    127,
+    153
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "93": {
+   "base": "COLOR_CYAN",
+   "base_id": 23,
+   "base_rgb": [
+    76,
+    127,
+    153
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "94": {
+   "base": "COLOR_CYAN",
+   "base_id": 23,
+   "base_rgb": [
+    76,
+    127,
+    153
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "95": {
+   "base": "COLOR_CYAN",
+   "base_id": 23,
+   "base_rgb": [
+    76,
+    127,
+    153
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "96": {
+   "base": "COLOR_PURPLE",
+   "base_id": 24,
+   "base_rgb": [
+    127,
+    63,
+    178
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "97": {
+   "base": "COLOR_PURPLE",
+   "base_id": 24,
+   "base_rgb": [
+    127,
+    63,
+    178
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "98": {
+   "base": "COLOR_PURPLE",
+   "base_id": 24,
+   "base_rgb": [
+    127,
+    63,
+    178
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "99": {
+   "base": "COLOR_PURPLE",
+   "base_id": 24,
+   "base_rgb": [
+    127,
+    63,
+    178
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "100": {
+   "base": "COLOR_BLUE",
+   "base_id": 25,
+   "base_rgb": [
+    51,
+    76,
+    178
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "101": {
+   "base": "COLOR_BLUE",
+   "base_id": 25,
+   "base_rgb": [
+    51,
+    76,
+    178
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "102": {
+   "base": "COLOR_BLUE",
+   "base_id": 25,
+   "base_rgb": [
+    51,
+    76,
+    178
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "103": {
+   "base": "COLOR_BLUE",
+   "base_id": 25,
+   "base_rgb": [
+    51,
+    76,
+    178
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "104": {
+   "base": "COLOR_BROWN",
+   "base_id": 26,
+   "base_rgb": [
+    102,
+    76,
+    51
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "105": {
+   "base": "COLOR_BROWN",
+   "base_id": 26,
+   "base_rgb": [
+    102,
+    76,
+    51
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "106": {
+   "base": "COLOR_BROWN",
+   "base_id": 26,
+   "base_rgb": [
+    102,
+    76,
+    51
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "107": {
+   "base": "COLOR_BROWN",
+   "base_id": 26,
+   "base_rgb": [
+    102,
+    76,
+    51
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "108": {
+   "base": "COLOR_GREEN",
+   "base_id": 27,
+   "base_rgb": [
+    102,
+    127,
+    51
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "109": {
+   "base": "COLOR_GREEN",
+   "base_id": 27,
+   "base_rgb": [
+    102,
+    127,
+    51
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "110": {
+   "base": "COLOR_GREEN",
+   "base_id": 27,
+   "base_rgb": [
+    102,
+    127,
+    51
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "111": {
+   "base": "COLOR_GREEN",
+   "base_id": 27,
+   "base_rgb": [
+    102,
+    127,
+    51
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "112": {
+   "base": "COLOR_RED",
+   "base_id": 28,
+   "base_rgb": [
+    153,
+    51,
+    51
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "113": {
+   "base": "COLOR_RED",
+   "base_id": 28,
+   "base_rgb": [
+    153,
+    51,
+    51
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "114": {
+   "base": "COLOR_RED",
+   "base_id": 28,
+   "base_rgb": [
+    153,
+    51,
+    51
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "115": {
+   "base": "COLOR_RED",
+   "base_id": 28,
+   "base_rgb": [
+    153,
+    51,
+    51
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "116": {
+   "base": "COLOR_BLACK",
+   "base_id": 29,
+   "base_rgb": [
+    25,
+    25,
+    25
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "117": {
+   "base": "COLOR_BLACK",
+   "base_id": 29,
+   "base_rgb": [
+    25,
+    25,
+    25
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "118": {
+   "base": "COLOR_BLACK",
+   "base_id": 29,
+   "base_rgb": [
+    25,
+    25,
+    25
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "119": {
+   "base": "COLOR_BLACK",
+   "base_id": 29,
+   "base_rgb": [
+    25,
+    25,
+    25
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "120": {
+   "base": "GOLD",
+   "base_id": 30,
+   "base_rgb": [
+    250,
+    238,
+    77
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "121": {
+   "base": "GOLD",
+   "base_id": 30,
+   "base_rgb": [
+    250,
+    238,
+    77
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "122": {
+   "base": "GOLD",
+   "base_id": 30,
+   "base_rgb": [
+    250,
+    238,
+    77
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "123": {
+   "base": "GOLD",
+   "base_id": 30,
+   "base_rgb": [
+    250,
+    238,
+    77
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "124": {
+   "base": "DIAMOND",
+   "base_id": 31,
+   "base_rgb": [
+    92,
+    219,
+    213
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "125": {
+   "base": "DIAMOND",
+   "base_id": 31,
+   "base_rgb": [
+    92,
+    219,
+    213
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "126": {
+   "base": "DIAMOND",
+   "base_id": 31,
+   "base_rgb": [
+    92,
+    219,
+    213
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "127": {
+   "base": "DIAMOND",
+   "base_id": 31,
+   "base_rgb": [
+    92,
+    219,
+    213
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "128": {
+   "base": "LAPIS",
+   "base_id": 32,
+   "base_rgb": [
+    74,
+    128,
+    255
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "129": {
+   "base": "LAPIS",
+   "base_id": 32,
+   "base_rgb": [
+    74,
+    128,
+    255
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "130": {
+   "base": "LAPIS",
+   "base_id": 32,
+   "base_rgb": [
+    74,
+    128,
+    255
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "131": {
+   "base": "LAPIS",
+   "base_id": 32,
+   "base_rgb": [
+    74,
+    128,
+    255
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "132": {
+   "base": "EMERALD",
+   "base_id": 33,
+   "base_rgb": [
+    0,
+    217,
+    58
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "133": {
+   "base": "EMERALD",
+   "base_id": 33,
+   "base_rgb": [
+    0,
+    217,
+    58
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "134": {
+   "base": "EMERALD",
+   "base_id": 33,
+   "base_rgb": [
+    0,
+    217,
+    58
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "135": {
+   "base": "EMERALD",
+   "base_id": 33,
+   "base_rgb": [
+    0,
+    217,
+    58
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "136": {
+   "base": "PODZOL",
+   "base_id": 34,
+   "base_rgb": [
+    129,
+    86,
+    49
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "137": {
+   "base": "PODZOL",
+   "base_id": 34,
+   "base_rgb": [
+    129,
+    86,
+    49
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "138": {
+   "base": "PODZOL",
+   "base_id": 34,
+   "base_rgb": [
+    129,
+    86,
+    49
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "139": {
+   "base": "PODZOL",
+   "base_id": 34,
+   "base_rgb": [
+    129,
+    86,
+    49
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "140": {
+   "base": "NETHER",
+   "base_id": 35,
+   "base_rgb": [
+    112,
+    2,
+    0
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "141": {
+   "base": "NETHER",
+   "base_id": 35,
+   "base_rgb": [
+    112,
+    2,
+    0
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "142": {
+   "base": "NETHER",
+   "base_id": 35,
+   "base_rgb": [
+    112,
+    2,
+    0
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "143": {
+   "base": "NETHER",
+   "base_id": 35,
+   "base_rgb": [
+    112,
+    2,
+    0
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "144": {
+   "base": "TERRACOTTA_WHITE",
+   "base_id": 36,
+   "base_rgb": [
+    209,
+    177,
+    161
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "145": {
+   "base": "TERRACOTTA_WHITE",
+   "base_id": 36,
+   "base_rgb": [
+    209,
+    177,
+    161
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "146": {
+   "base": "TERRACOTTA_WHITE",
+   "base_id": 36,
+   "base_rgb": [
+    209,
+    177,
+    161
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "147": {
+   "base": "TERRACOTTA_WHITE",
+   "base_id": 36,
+   "base_rgb": [
+    209,
+    177,
+    161
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "148": {
+   "base": "TERRACOTTA_ORANGE",
+   "base_id": 37,
+   "base_rgb": [
+    159,
+    82,
+    36
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "149": {
+   "base": "TERRACOTTA_ORANGE",
+   "base_id": 37,
+   "base_rgb": [
+    159,
+    82,
+    36
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "150": {
+   "base": "TERRACOTTA_ORANGE",
+   "base_id": 37,
+   "base_rgb": [
+    159,
+    82,
+    36
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "151": {
+   "base": "TERRACOTTA_ORANGE",
+   "base_id": 37,
+   "base_rgb": [
+    159,
+    82,
+    36
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "152": {
+   "base": "TERRACOTTA_MAGENTA",
+   "base_id": 38,
+   "base_rgb": [
+    149,
+    87,
+    108
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "153": {
+   "base": "TERRACOTTA_MAGENTA",
+   "base_id": 38,
+   "base_rgb": [
+    149,
+    87,
+    108
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "154": {
+   "base": "TERRACOTTA_MAGENTA",
+   "base_id": 38,
+   "base_rgb": [
+    149,
+    87,
+    108
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "155": {
+   "base": "TERRACOTTA_MAGENTA",
+   "base_id": 38,
+   "base_rgb": [
+    149,
+    87,
+    108
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "156": {
+   "base": "TERRACOTTA_LIGHT_BLUE",
+   "base_id": 39,
+   "base_rgb": [
+    112,
+    108,
+    138
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "157": {
+   "base": "TERRACOTTA_LIGHT_BLUE",
+   "base_id": 39,
+   "base_rgb": [
+    112,
+    108,
+    138
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "158": {
+   "base": "TERRACOTTA_LIGHT_BLUE",
+   "base_id": 39,
+   "base_rgb": [
+    112,
+    108,
+    138
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "159": {
+   "base": "TERRACOTTA_LIGHT_BLUE",
+   "base_id": 39,
+   "base_rgb": [
+    112,
+    108,
+    138
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "160": {
+   "base": "TERRACOTTA_YELLOW",
+   "base_id": 40,
+   "base_rgb": [
+    186,
+    133,
+    36
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "161": {
+   "base": "TERRACOTTA_YELLOW",
+   "base_id": 40,
+   "base_rgb": [
+    186,
+    133,
+    36
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "162": {
+   "base": "TERRACOTTA_YELLOW",
+   "base_id": 40,
+   "base_rgb": [
+    186,
+    133,
+    36
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "163": {
+   "base": "TERRACOTTA_YELLOW",
+   "base_id": 40,
+   "base_rgb": [
+    186,
+    133,
+    36
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "164": {
+   "base": "TERRACOTTA_LIGHT_GREEN",
+   "base_id": 41,
+   "base_rgb": [
+    103,
+    117,
+    53
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "165": {
+   "base": "TERRACOTTA_LIGHT_GREEN",
+   "base_id": 41,
+   "base_rgb": [
+    103,
+    117,
+    53
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "166": {
+   "base": "TERRACOTTA_LIGHT_GREEN",
+   "base_id": 41,
+   "base_rgb": [
+    103,
+    117,
+    53
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "167": {
+   "base": "TERRACOTTA_LIGHT_GREEN",
+   "base_id": 41,
+   "base_rgb": [
+    103,
+    117,
+    53
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "168": {
+   "base": "TERRACOTTA_PINK",
+   "base_id": 42,
+   "base_rgb": [
+    160,
+    77,
+    78
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "169": {
+   "base": "TERRACOTTA_PINK",
+   "base_id": 42,
+   "base_rgb": [
+    160,
+    77,
+    78
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "170": {
+   "base": "TERRACOTTA_PINK",
+   "base_id": 42,
+   "base_rgb": [
+    160,
+    77,
+    78
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "171": {
+   "base": "TERRACOTTA_PINK",
+   "base_id": 42,
+   "base_rgb": [
+    160,
+    77,
+    78
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "172": {
+   "base": "TERRACOTTA_GRAY",
+   "base_id": 43,
+   "base_rgb": [
+    57,
+    41,
+    35
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "173": {
+   "base": "TERRACOTTA_GRAY",
+   "base_id": 43,
+   "base_rgb": [
+    57,
+    41,
+    35
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "174": {
+   "base": "TERRACOTTA_GRAY",
+   "base_id": 43,
+   "base_rgb": [
+    57,
+    41,
+    35
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "175": {
+   "base": "TERRACOTTA_GRAY",
+   "base_id": 43,
+   "base_rgb": [
+    57,
+    41,
+    35
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "176": {
+   "base": "TERRACOTTA_LIGHT_GRAY",
+   "base_id": 44,
+   "base_rgb": [
+    135,
+    107,
+    98
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "177": {
+   "base": "TERRACOTTA_LIGHT_GRAY",
+   "base_id": 44,
+   "base_rgb": [
+    135,
+    107,
+    98
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "178": {
+   "base": "TERRACOTTA_LIGHT_GRAY",
+   "base_id": 44,
+   "base_rgb": [
+    135,
+    107,
+    98
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "179": {
+   "base": "TERRACOTTA_LIGHT_GRAY",
+   "base_id": 44,
+   "base_rgb": [
+    135,
+    107,
+    98
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "180": {
+   "base": "TERRACOTTA_CYAN",
+   "base_id": 45,
+   "base_rgb": [
+    87,
+    92,
+    92
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "181": {
+   "base": "TERRACOTTA_CYAN",
+   "base_id": 45,
+   "base_rgb": [
+    87,
+    92,
+    92
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "182": {
+   "base": "TERRACOTTA_CYAN",
+   "base_id": 45,
+   "base_rgb": [
+    87,
+    92,
+    92
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "183": {
+   "base": "TERRACOTTA_CYAN",
+   "base_id": 45,
+   "base_rgb": [
+    87,
+    92,
+    92
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "184": {
+   "base": "TERRACOTTA_PURPLE",
+   "base_id": 46,
+   "base_rgb": [
+    122,
+    73,
+    88
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "185": {
+   "base": "TERRACOTTA_PURPLE",
+   "base_id": 46,
+   "base_rgb": [
+    122,
+    73,
+    88
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "186": {
+   "base": "TERRACOTTA_PURPLE",
+   "base_id": 46,
+   "base_rgb": [
+    122,
+    73,
+    88
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "187": {
+   "base": "TERRACOTTA_PURPLE",
+   "base_id": 46,
+   "base_rgb": [
+    122,
+    73,
+    88
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "188": {
+   "base": "TERRACOTTA_BLUE",
+   "base_id": 47,
+   "base_rgb": [
+    76,
+    62,
+    92
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "189": {
+   "base": "TERRACOTTA_BLUE",
+   "base_id": 47,
+   "base_rgb": [
+    76,
+    62,
+    92
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "190": {
+   "base": "TERRACOTTA_BLUE",
+   "base_id": 47,
+   "base_rgb": [
+    76,
+    62,
+    92
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "191": {
+   "base": "TERRACOTTA_BLUE",
+   "base_id": 47,
+   "base_rgb": [
+    76,
+    62,
+    92
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "192": {
+   "base": "TERRACOTTA_BROWN",
+   "base_id": 48,
+   "base_rgb": [
+    76,
+    50,
+    35
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "193": {
+   "base": "TERRACOTTA_BROWN",
+   "base_id": 48,
+   "base_rgb": [
+    76,
+    50,
+    35
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "194": {
+   "base": "TERRACOTTA_BROWN",
+   "base_id": 48,
+   "base_rgb": [
+    76,
+    50,
+    35
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "195": {
+   "base": "TERRACOTTA_BROWN",
+   "base_id": 48,
+   "base_rgb": [
+    76,
+    50,
+    35
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "196": {
+   "base": "TERRACOTTA_GREEN",
+   "base_id": 49,
+   "base_rgb": [
+    76,
+    82,
+    42
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "197": {
+   "base": "TERRACOTTA_GREEN",
+   "base_id": 49,
+   "base_rgb": [
+    76,
+    82,
+    42
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "198": {
+   "base": "TERRACOTTA_GREEN",
+   "base_id": 49,
+   "base_rgb": [
+    76,
+    82,
+    42
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "199": {
+   "base": "TERRACOTTA_GREEN",
+   "base_id": 49,
+   "base_rgb": [
+    76,
+    82,
+    42
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "200": {
+   "base": "TERRACOTTA_RED",
+   "base_id": 50,
+   "base_rgb": [
+    142,
+    60,
+    46
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "201": {
+   "base": "TERRACOTTA_RED",
+   "base_id": 50,
+   "base_rgb": [
+    142,
+    60,
+    46
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "202": {
+   "base": "TERRACOTTA_RED",
+   "base_id": 50,
+   "base_rgb": [
+    142,
+    60,
+    46
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "203": {
+   "base": "TERRACOTTA_RED",
+   "base_id": 50,
+   "base_rgb": [
+    142,
+    60,
+    46
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "204": {
+   "base": "TERRACOTTA_BLACK",
+   "base_id": 51,
+   "base_rgb": [
+    37,
+    22,
+    16
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "205": {
+   "base": "TERRACOTTA_BLACK",
+   "base_id": 51,
+   "base_rgb": [
+    37,
+    22,
+    16
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "206": {
+   "base": "TERRACOTTA_BLACK",
+   "base_id": 51,
+   "base_rgb": [
+    37,
+    22,
+    16
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "207": {
+   "base": "TERRACOTTA_BLACK",
+   "base_id": 51,
+   "base_rgb": [
+    37,
+    22,
+    16
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "208": {
+   "base": "CRIMSON_NYLIUM",
+   "base_id": 52,
+   "base_rgb": [
+    189,
+    48,
+    49
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "209": {
+   "base": "CRIMSON_NYLIUM",
+   "base_id": 52,
+   "base_rgb": [
+    189,
+    48,
+    49
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "210": {
+   "base": "CRIMSON_NYLIUM",
+   "base_id": 52,
+   "base_rgb": [
+    189,
+    48,
+    49
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "211": {
+   "base": "CRIMSON_NYLIUM",
+   "base_id": 52,
+   "base_rgb": [
+    189,
+    48,
+    49
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "212": {
+   "base": "CRIMSON_STEM",
+   "base_id": 53,
+   "base_rgb": [
+    148,
+    63,
+    97
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "213": {
+   "base": "CRIMSON_STEM",
+   "base_id": 53,
+   "base_rgb": [
+    148,
+    63,
+    97
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "214": {
+   "base": "CRIMSON_STEM",
+   "base_id": 53,
+   "base_rgb": [
+    148,
+    63,
+    97
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "215": {
+   "base": "CRIMSON_STEM",
+   "base_id": 53,
+   "base_rgb": [
+    148,
+    63,
+    97
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "216": {
+   "base": "CRIMSON_HYPHAE",
+   "base_id": 54,
+   "base_rgb": [
+    92,
+    25,
+    29
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "217": {
+   "base": "CRIMSON_HYPHAE",
+   "base_id": 54,
+   "base_rgb": [
+    92,
+    25,
+    29
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "218": {
+   "base": "CRIMSON_HYPHAE",
+   "base_id": 54,
+   "base_rgb": [
+    92,
+    25,
+    29
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "219": {
+   "base": "CRIMSON_HYPHAE",
+   "base_id": 54,
+   "base_rgb": [
+    92,
+    25,
+    29
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "220": {
+   "base": "WARPED_NYLIUM",
+   "base_id": 55,
+   "base_rgb": [
+    22,
+    126,
+    134
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "221": {
+   "base": "WARPED_NYLIUM",
+   "base_id": 55,
+   "base_rgb": [
+    22,
+    126,
+    134
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "222": {
+   "base": "WARPED_NYLIUM",
+   "base_id": 55,
+   "base_rgb": [
+    22,
+    126,
+    134
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "223": {
+   "base": "WARPED_NYLIUM",
+   "base_id": 55,
+   "base_rgb": [
+    22,
+    126,
+    134
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "224": {
+   "base": "WARPED_STEM",
+   "base_id": 56,
+   "base_rgb": [
+    58,
+    142,
+    140
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "225": {
+   "base": "WARPED_STEM",
+   "base_id": 56,
+   "base_rgb": [
+    58,
+    142,
+    140
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "226": {
+   "base": "WARPED_STEM",
+   "base_id": 56,
+   "base_rgb": [
+    58,
+    142,
+    140
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "227": {
+   "base": "WARPED_STEM",
+   "base_id": 56,
+   "base_rgb": [
+    58,
+    142,
+    140
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "228": {
+   "base": "WARPED_HYPHAE",
+   "base_id": 57,
+   "base_rgb": [
+    86,
+    44,
+    62
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "229": {
+   "base": "WARPED_HYPHAE",
+   "base_id": 57,
+   "base_rgb": [
+    86,
+    44,
+    62
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "230": {
+   "base": "WARPED_HYPHAE",
+   "base_id": 57,
+   "base_rgb": [
+    86,
+    44,
+    62
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "231": {
+   "base": "WARPED_HYPHAE",
+   "base_id": 57,
+   "base_rgb": [
+    86,
+    44,
+    62
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "232": {
+   "base": "WARPED_WART_BLOCK",
+   "base_id": 58,
+   "base_rgb": [
+    20,
+    180,
+    133
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "233": {
+   "base": "WARPED_WART_BLOCK",
+   "base_id": 58,
+   "base_rgb": [
+    20,
+    180,
+    133
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "234": {
+   "base": "WARPED_WART_BLOCK",
+   "base_id": 58,
+   "base_rgb": [
+    20,
+    180,
+    133
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "235": {
+   "base": "WARPED_WART_BLOCK",
+   "base_id": 58,
+   "base_rgb": [
+    20,
+    180,
+    133
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "236": {
+   "base": "DEEPSLATE",
+   "base_id": 59,
+   "base_rgb": [
+    100,
+    100,
+    100
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "237": {
+   "base": "DEEPSLATE",
+   "base_id": 59,
+   "base_rgb": [
+    100,
+    100,
+    100
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "238": {
+   "base": "DEEPSLATE",
+   "base_id": 59,
+   "base_rgb": [
+    100,
+    100,
+    100
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "239": {
+   "base": "DEEPSLATE",
+   "base_id": 59,
+   "base_rgb": [
+    100,
+    100,
+    100
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "240": {
+   "base": "RAW_IRON",
+   "base_id": 60,
+   "base_rgb": [
+    216,
+    175,
+    147
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "241": {
+   "base": "RAW_IRON",
+   "base_id": 60,
+   "base_rgb": [
+    216,
+    175,
+    147
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "242": {
+   "base": "RAW_IRON",
+   "base_id": 60,
+   "base_rgb": [
+    216,
+    175,
+    147
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "243": {
+   "base": "RAW_IRON",
+   "base_id": 60,
+   "base_rgb": [
+    216,
+    175,
+    147
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  },
+  "244": {
+   "base": "GLOW_LICHEN",
+   "base_id": 61,
+   "base_rgb": [
+    127,
+    167,
+    150
+   ],
+   "brightness": "LOW",
+   "modifier": 180
+  },
+  "245": {
+   "base": "GLOW_LICHEN",
+   "base_id": 61,
+   "base_rgb": [
+    127,
+    167,
+    150
+   ],
+   "brightness": "NORMAL",
+   "modifier": 220
+  },
+  "246": {
+   "base": "GLOW_LICHEN",
+   "base_id": 61,
+   "base_rgb": [
+    127,
+    167,
+    150
+   ],
+   "brightness": "HIGH",
+   "modifier": 255
+  },
+  "247": {
+   "base": "GLOW_LICHEN",
+   "base_id": 61,
+   "base_rgb": [
+    127,
+    167,
+    150
+   ],
+   "brightness": "LOWEST",
+   "modifier": 135
+  }
+ }
+}

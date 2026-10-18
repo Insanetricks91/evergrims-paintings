@@ -31,3 +31,14 @@ Width comes before height (file names say height x width). Every line ends in "c
 /imageframe create sushi_nigiri_trio https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/sushi_nigiri_trio_1x3.png 3 1 combined
 /imageframe create sushi_noren_curtain https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/sushi_noren_curtain_1x3.png 3 1 combined
 /imageframe create sushi_soy_chopsticks https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/sushi_soy_chopsticks_1x1.png 1 1 combined
+
+Retro 90s backlit set (2026-10-17). Hang these in GLOW item frames: they show at full brightness, like a lit sign.
+The .gif ones animate on Java; Bedrock shows their first frame, which is drawn as a finished picture.
+/imageframe create evergrims_falls https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/evergrims_falls_3x3.gif 3 3 combined
+/imageframe create fish_tank https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/fish_tank_1x2.gif 2 1 combined
+/imageframe create lava_lamp https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/lava_lamp_2x1.gif 1 2 combined
+/imageframe create neon_closed https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/neon_closed_1x2.png 2 1 combined
+/imageframe create neon_fishin_dock https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/neon_fishin_dock_2x3.gif 3 2 combined
+/imageframe create neon_open https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/neon_open_1x2.png 2 1 combined
+/imageframe create neon_sushi https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/neon_sushi_1x3.png 3 1 combined
+/imageframe create plasma_globe https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/plasma_globe_2x2.gif 2 2 combined

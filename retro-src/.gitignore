@@ -1,0 +1,10 @@
+__pycache__/
+work/
+previews/
+*_preview.png
+*_zoom.png
+*_still_*.png
+*.gif
+neon/*.png
+kit/tests/out/
+*.class
