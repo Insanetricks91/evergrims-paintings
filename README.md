@@ -59,6 +59,7 @@ write beside themselves; copy the finished file up).
 /imageframe create neon_open https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/neon_open_1x2.png 2 1 combined
 /imageframe create neon_sushi https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/neon_sushi_1x3.png 3 1 combined
 /imageframe create plasma_globe https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/plasma_globe_2x2.gif 2 2 combined
+/imageframe create retro_sword_tv https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/retro_sword_tv_3x4.gif 4 3 combined
 ```
 
 | Piece | Name | Size (HxW) | |
@@ -71,6 +72,7 @@ write beside themselves; copy the finished file up).
 | ![neon_open](neon_open_1x2.png) | `neon_open` | 1x2 | neon OPEN, fully lit |
 | ![neon_sushi](neon_sushi_1x3.png) | `neon_sushi` | 1x3 | neon Sushi with a nigiri, fully lit |
 | ![plasma_globe](plasma_globe_2x2.gif) | `plasma_globe` | 2x2 | desk toy: plasma globe |
+| ![retro_sword_tv](retro_sword_tv_3x4.gif) | `retro_sword_tv` | 3x4 | retro game TV: sword-swipe animation, four-frame loop |
 
 ## Gallery
 

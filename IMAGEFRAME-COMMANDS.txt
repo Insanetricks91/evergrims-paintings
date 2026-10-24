@@ -42,3 +42,6 @@ The .gif ones animate on Java; Bedrock shows their first frame, which is drawn a
 /imageframe create neon_open https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/neon_open_1x2.png 2 1 combined
 /imageframe create neon_sushi https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/neon_sushi_1x3.png 3 1 combined
 /imageframe create plasma_globe https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/plasma_globe_2x2.gif 2 2 combined
+
+Retro game TV (2026-10-24): 4 frames, sword swipe, 800 ms loop.
+/imageframe create retro_sword_tv https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/retro_sword_tv_3x4.gif 4 3 combined
