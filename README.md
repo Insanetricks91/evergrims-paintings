@@ -47,8 +47,8 @@ Neon signs, desk toys and a lighted motion waterfall, made for **glow item frame
 brightness, so these read like lit signs and lightbox pictures in a dark room. The `.gif` pieces animate on Java;
 Bedrock shows a GIF's first frame, and every first frame is drawn as a finished still (the neon signs fully lit, the
 falls with its water lit). Every pixel is a Minecraft map colour (the 26.3 game's own table), so ImageFrame shows them
-crisp, with no dithering. Sources in `retro-src/` (`python3 retro-src/neon/neon.py`, `desk/desk.py`, `falls/falls.py`
-write beside themselves; copy the finished file up).
+crisp, with no dithering. Sources in `retro-src/` (`python3 retro-src/neon/neon.py`, `desk/desk.py`, `falls/falls.py`,
+`tv/tv.py` write beside themselves; copy the finished file up).
 
 ```
 /imageframe create evergrims_falls https://raw.githubusercontent.com/Insanetricks91/evergrims-paintings/main/evergrims_falls_3x3.gif 3 3 combined
@@ -72,7 +72,7 @@ write beside themselves; copy the finished file up).
 | ![neon_open](neon_open_1x2.png) | `neon_open` | 1x2 | neon OPEN, fully lit |
 | ![neon_sushi](neon_sushi_1x3.png) | `neon_sushi` | 1x3 | neon Sushi with a nigiri, fully lit |
 | ![plasma_globe](plasma_globe_2x2.gif) | `plasma_globe` | 2x2 | desk toy: plasma globe |
-| ![retro_sword_tv](retro_sword_tv_3x4.gif) | `retro_sword_tv` | 3x4 | retro game TV: sword-swipe animation, four-frame loop |
+| ![retro_sword_tv](retro_sword_tv_3x4.gif) | `retro_sword_tv` | 3x4 | retro game TV: sword swipe at a slime, four-frame loop; only the hero moves |
 
 ## Gallery
 
